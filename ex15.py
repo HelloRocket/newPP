@@ -3,10 +3,11 @@ from sys import argv
 #this defines variables that hold the arg values we imported
 script, filename = argv
 
-#this creates a file object with the text ontents from the refered file
+#this creates a file object with the text contents from the refered file
 txt = open(filename)
 #prints a string woth the imported file name
-print('Here is your file {}:'.format(argv[1]))
+#print('Here is your file {}:'.format(argv[1]))
+print(f'Here is your file {filename}:')
 #extracts the text content from the file object and then prints it to screen
 print(txt.read())
 
