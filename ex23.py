@@ -1,4 +1,8 @@
 import sys
+import urllib.request
+languges_import, headers = urllib.request.urlretrieve('https://learnpythonthehardway.org/python3/languages.txt')
+
+
 script, input_encoding, error = sys.argv
 
 
@@ -18,6 +22,6 @@ def print_line(line, encoding, errors):
     print(raw_bytes, "<===>", cooked_string)
     
 
-languages = open("languages.txt", encoding="utf-8")
+languages = open(languges_import, encoding="utf-8")
 
 main(languages, input_encoding, error)
